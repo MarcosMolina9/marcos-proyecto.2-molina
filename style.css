@@ -1,0 +1,358 @@
+body{
+    background: linear-gradient(#00cf68, #ff0059, #ffcb00, #ae4dff)
+}
+
+
+th, td{
+    border: solid 1px black;
+    padding: 0;
+}
+
+.logo1{
+    background-color: blue;
+    border: 2px black solid;
+    width: 100px;
+    height: 100px;
+    transition: height 2s, width 2s, transform 2s;
+}
+ 
+.logo1:hover{
+    transform: rotate(1440deg);
+ }
+
+img{
+    display: flex;
+    width: 100%;
+}
+
+.img{
+    width: 100px;
+    height: 100px;
+}
+
+.nav1{ 
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav1 li{
+    list-style: none;
+    background-color: red;
+}
+
+.nav1 li a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav1 li a:hover{
+    color: black;
+}
+
+/*comienza grid de index.html*/
+
+/*grid header*/
+
+.header-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "logo1 none navbar1 navbar1"
+    "h1 h1 h1 h1"
+    ;
+}
+
+
+/*grid de header/div/h1*/
+
+.h1{
+    background-color: black;
+    color: red;
+    grid-area: h1;
+    display: flex;
+    justify-content: center;
+}
+
+/*comienza grid header/div/img*/
+
+.logo1{
+    grid-area: logo1;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*comienza grid de header/nav*/
+
+.navbar1{
+    background-color: blue;
+    grid-area: navbar1;
+}
+
+
+
+/* grid section*/
+
+.section-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: 
+    "block"
+    ;
+}
+
+.block{
+    grid-area: block; 
+}
+
+/* grid section/h3 */
+.one{
+    grid-area: one;
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    padding: 10px;
+    border: solid 5px;
+}
+
+.two{
+    grid-area: two;
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    padding: 10px;
+    border: solid 5px;
+}
+
+/* grid section/p */
+.p1{
+    grid-area: p1;
+    display: flex;
+    justify-content: start;
+    color: white;
+}
+
+.p2{
+    grid-area: p2;
+    display: flex;
+    justify-content: start;
+    color: white;
+}
+
+/*grid footer*/
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+      
+}
+
+.style{
+    display: flex;
+    justify-content: space-around;
+    background-color: green;
+    color: yellow;
+}
+
+/* responsive index.html */
+
+@media screen and (max-width: 400px){
+
+    .header-container{
+        display: grid;
+        max-width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: (3, 1fr);
+        grid-template-areas: 
+        "logo1" "h1" "navbar1";
+    }
+
+  
+    .h1{
+        grid-area: h1;
+        display: flex;
+        justify-content: center center;
+        background-color: black;
+        width: 100%;
+    }
+
+
+    .logo1{
+        grid-area: logo1;
+        display: flex;
+        justify-content: start;
+    }
+
+    .navbar1{
+        display: flex;
+        justify-content: start;
+
+    }
+
+    .navbar1 li {
+        grid-area: navbar1;
+        display: flex;
+        justify-content: space-around;        
+    }
+
+    .nav1{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+    }
+
+    .footer-container{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .style{
+        display: flex;
+        flex-direction: column;
+        background-color: green;
+        color: yellow;
+    }
+
+}
+
+/*responsive index.html tablet*/
+
+@media screen and (min-width: 401px) and (max-width: 768px){
+
+    .header-container{
+        display: grid;
+        max-width: 100%;
+        grid-template-columns: auto;
+        grid-template-rows: (2, 1fr);
+        grid-template-areas: 
+        "navbar1 . logo1"
+        "h1 h1 h1"
+        ;
+    }
+
+  
+    .h1{
+        grid-area: h1;
+        display: flex;
+        justify-content: center center;
+        background-color: black;
+        width: 100%;
+    }
+
+
+    .logo1{
+        grid-area: logo1;
+        display: flex;
+        justify-content: end;
+    }
+
+    .navbar1{
+        display: flex;
+        justify-content: start;
+
+    }
+
+    .navbar1 li {
+        grid-area: navbar1;
+        display: flex;
+        justify-content: space-around;        
+    }
+
+    .nav1{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+    }
+
+    .footer-container{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .style{
+        display: flex;
+        flex-direction: column;
+        background-color: green;
+        color: yellow;
+    }
+
+}
+
+/*comienza estilos de grid en hoja tokenomics.html*/
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas:
+    "nav-bar nav-bar . ."
+    ;
+}
+
+.nav-bar{
+    background-color: red;
+    grid-area: nav-bar;
+}
+
+.nav-ul{ 
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-ul li{
+    list-style: none;
+}
+
+.nav-ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-ul li a:hover{
+    color: black; 
+}
+
+
+
+.divi{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "li img img ."
+    "table img img ."
+    ;
+}
+
+.ul-li{
+    grid-area: li;  
+}
+
+.imgt{
+    grid-area: img;
+}
+
+.table{
+    grid-area: table;
+    display: flex;
+    width: 75%;
+    border-collapse: collapse; 
+
+}
+
+
+
+.pie{
+    display: flex;
+    background-color: green;
+    
+}
+
+.redes a{
+    color: white;
+}
